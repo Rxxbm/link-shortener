@@ -1,0 +1,15 @@
+POST http://localhost:3000/link
+Content-Type: application/json
+
+{
+  "url": "https://www.youtube.com",
+  "shortUrl": "b"
+}
+
+###
+
+GET http://localhost:3000/abcad
+
+###
+
+GET http://localhost:3000/

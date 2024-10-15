@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/node/app
+    env_file:
+      - .env
+
+  db:
+    image: mongo:4.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=rubinho
+      - MONGO_INITDB_ROOT_PASSWORD=123
